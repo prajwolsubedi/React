@@ -1,7 +1,6 @@
-    //React element is just a plain javascript object
+//React element is just a plain javascript object
 
-
-    /* 
+/* 
     Parcel does all of this 
     HMR- hot module replacement
     File watcher algorithm - C++
@@ -18,20 +17,35 @@
 
     */
 
-    import React from "react"
-    import ReactDOM from "react-dom/client"
-    const heading1 = React.createElement("h1", {} , "Heading1")
-    const heading2 = React.createElement("h1", null , "Heading2")
+import React from "react";
+import ReactDOM from "react-dom/client";
+// const heading1 = React.createElement("h1", {} , "Heading1")
+// const heading2 = React.createElement("h1", null , "Heading2")
 
-    const container = React.createElement("div", {id:"container"}, [heading1,heading2])
+const heading1 = React.createElement(
+  "h1",
+  {
+    id: "title",
+    key: "h1",
+  },
+  "Hell"
+);
 
-    const heading = React.createElement(
-      "h1",
-      {
-        id: "title",
-      },
-      "Hello from Parcel bro chill hana khatra garnu parxa."
-    );
-    //Root is the place where react runs
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading);
+const heading2 = React.createElement(
+  "h2",
+  {
+    id: "title2",
+    key: "h2",
+  },
+  "Hello"
+);
+
+console.log(heading2);
+
+const container = React.createElement("div", { id: "container" }, [
+  heading1,
+  heading2,
+]);
+//Root is the place where react runs
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(container);
