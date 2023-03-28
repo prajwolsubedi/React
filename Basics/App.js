@@ -3,28 +3,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//using createElement()
-const container = React.createElement(
-  "div",
-  {},
-  React.createElement("ul", {}, [
-    React.createElement("li", {key:"1"}, "I"),
-    React.createElement("li", {key:"2"}, "Love"),
-    React.createElement("li", {key:"3"}, "Elon Musk"),
-  ])
-);
+//React element
+const container = <h1>Hello from React element</h1>;
 
-//using jsx
-const container2 = (
-  <div>
-    <ul>
-      <li key={1}>I</li>
-      <li key={2}>Love</li>
-      <li key={3}>Elon Musk</li>
-    </ul>
-  </div>
-);
+//React Component
+const ContainerFunction = () => {
+  return (
+    <>
+      {container} 
+      <h1>Hello from React Component </h1>
+    </>
+  );
+};
+
 console.log(container);
+console.log(ContainerFunction);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<ContainerFunction />);
+// root.render(container);
