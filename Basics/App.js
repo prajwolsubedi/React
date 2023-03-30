@@ -10,8 +10,8 @@ const container = <h1>Hello from React element</h1>;
 const ContainerFunction = () => {
   return (
     <>
-      {container} 
       <h1>Hello from React Component </h1>
+      {/* comments in jsx */}
     </>
   );
 };
